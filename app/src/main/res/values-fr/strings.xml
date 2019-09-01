@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Androidx MVVM</string>
+    <string name="title_item_detail">Détail</string>
+    <string name="by_author">Par %1$s</string>
+    <string name="detail_fab_msg">L\'auteur est %1$s</string>
+    <string name="error_msg">Erreur : %1$s</string>
+</resources>
