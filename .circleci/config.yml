@@ -1,12 +1,3 @@
-# Java Gradle CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-java/ for more details
-#
-gradle_execution_rights: &gradle_execution_rights
-  run:
-    name: Setup gradlew execution rights
-    command: chmod +x gradlew
-
 version: 2
 jobs:
   build:
@@ -18,9 +9,8 @@ jobs:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
-      - *gradle_execution_rights
       - run:
-          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+          name: Chmod permissions
           command: sudo chmod +x ./gradlew
       - restore_cache:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
