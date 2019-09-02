@@ -25,7 +25,7 @@ class AlbumListActivity : AppCompatActivity() {
             val fragment = AlbumGridFragment()
 
             supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, fragment).commit()
+                .add(R.id.fragmentcontainerMain, fragment).commit()
         }
     }
 }

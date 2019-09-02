@@ -48,13 +48,13 @@ class AlbumDetailFragment : Fragment() {
 
         // Show the dummy content as text in a TextView.
         item?.let {
-            rootView.item_detail.text = String.format(getString(R.string.by_author), it.artist.name)
+            rootView.textviewItemDetail.text = String.format(getString(R.string.by_author), it.artist.name)
 
-            rootView.toolbar_layout?.title = it.title
+            rootView.toolbarlayoutDetail?.title = it.title
 
-            ImageLoader.loadWithFadeInAnimation(rootView.detail_imageview_placeholder, it.cover_medium)
+            ImageLoader.loadWithFadeInAnimation(rootView.imageviewDetailPlaceholder, it.cover_medium)
 
-            ImageLoader.loadWithFadeInAnimation(rootView.detail_artist_imageview_placeholder, it.artist?.picture_big)
+            ImageLoader.loadWithFadeInAnimation(rootView.imageviewDetailArtist, it.artist.picture_big)
 
             rootView.fab.setOnClickListener { view ->
                 Snackbar.make(

@@ -48,13 +48,13 @@ class AlbumGridFragment : Fragment() {
     private fun handleResponse(response: AlbumLiveDataState) {
 
         if (response.isSuccess) {
-            recycler_view.apply {
+            recyclerview.apply {
                 layoutManager = GridLayoutManager(context, 3)
                 adapter = AlbumAdapter(response.response!!.data, { album: Album -> onItemClicked(album) })
             }
         } else {
             val snackbar = Snackbar.make(
-                recycler_view, String.format(getString(R.string.error_msg), response.errorMsg),
+                recyclerview, String.format(getString(R.string.error_msg), response.errorMsg),
                 Snackbar.LENGTH_INDEFINITE
             )
             snackbar.show()

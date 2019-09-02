@@ -9,14 +9,14 @@
                                                      tools:ignore="MergeRootFrame">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar"
+            android:id="@+id/appbarlayoutDetail"
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_bar_height"
             android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/toolbar_layout"
+                android:id="@+id/toolbarlayoutDetail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
@@ -25,7 +25,7 @@
                 app:toolbarId="@+id/toolbar">
 
             <ImageView
-                    android:id="@+id/detail_imageview_placeholder"
+                    android:id="@+id/imageviewDetailPlaceholder"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:scaleType="centerCrop"
@@ -47,7 +47,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-            android:id="@+id/item_detail_container"
+            android:id="@+id/containerItemDetail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -57,7 +57,7 @@
                       android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/item_detail"
+                    android:id="@+id/textviewItemDetail"
                     style="?android:attr/textAppearanceLarge"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -66,7 +66,7 @@
                     tools:context=".AlbumDetailFragment"/>
 
             <ImageView
-                    android:id="@+id/detail_artist_imageview_placeholder"
+                    android:id="@+id/imageviewDetailArtist"
                     android:layout_width="match_parent"
                     android:layout_height="500dp"
                     android:scaleType="centerCrop"
@@ -86,7 +86,7 @@
             android:layout_gravity="center_vertical|start"
             android:layout_margin="@dimen/fab_margin"
             app:srcCompat="@android:drawable/star_big_on"
-            app:layout_anchor="@+id/item_detail_container"
+            app:layout_anchor="@+id/containerItemDetail"
             app:layout_anchorGravity="top|end"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

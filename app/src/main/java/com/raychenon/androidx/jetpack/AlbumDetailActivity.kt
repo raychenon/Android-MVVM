@@ -37,7 +37,7 @@ class AlbumDetailActivity : AppCompatActivity() {
             }
 
             supportFragmentManager.beginTransaction()
-                .add(R.id.item_detail_container, fragment)
+                .add(R.id.containerItemDetail, fragment)
                 .commit()
         }
 

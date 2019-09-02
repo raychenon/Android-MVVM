@@ -23,7 +23,7 @@
                                                      tools:context=".AlbumListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar"
+            android:id="@+id/appbarlayoutDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.AppBarOverlay">
@@ -37,7 +37,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
         <FrameLayout
-                     android:id="@+id/fragment_container"
+                     android:id="@+id/fragmentcontainerMain"
                      android:layout_width="match_parent"
                      android:layout_height="match_parent"
                      android:orientation="vertical">
