@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.albumlist
 
 import android.util.Log
 import androidx.lifecycle.LiveData

@@ -1,8 +1,9 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.albumlist
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.main_activity.*
+import com.raychenon.androidx.jetpack.R
+import kotlinx.android.synthetic.main.list_activity.*
 
 /**
  * An activity representing a list of Pings. This activity
@@ -16,7 +17,7 @@ class AlbumListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        setContentView(R.layout.list_activity)
 
         setSupportActionBar(toolbar)
         toolbar.title = title

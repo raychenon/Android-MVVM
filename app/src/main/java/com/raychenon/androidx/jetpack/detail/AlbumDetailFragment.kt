@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.detail
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
+import com.raychenon.androidx.jetpack.R
+import com.raychenon.androidx.jetpack.albumlist.AlbumListActivity
 import com.raychenon.androidx.jetpack.image.ImageLoader
 import com.raychenon.androidx.jetpack.models.Album
 import kotlinx.android.synthetic.main.item_detail.view.*

@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.albumlist
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,10 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import com.raychenon.androidx.jetpack.R
+import com.raychenon.androidx.jetpack.albumlist.adapter.AlbumAdapter
+import com.raychenon.androidx.jetpack.detail.AlbumDetailActivity
+import com.raychenon.androidx.jetpack.detail.AlbumDetailFragment
 import com.raychenon.androidx.jetpack.models.Album
 import com.raychenon.androidx.jetpack.models.AlbumLiveDataState
 import kotlinx.android.synthetic.main.item_list.*
@@ -25,7 +29,7 @@ class AlbumGridFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.activity_item_list, container, false)
+        val rootView = inflater.inflate(R.layout.list_item_fragment, container, false)
 
         return rootView
     }
@@ -50,7 +54,9 @@ class AlbumGridFragment : Fragment() {
         if (response.isSuccess) {
             recyclerview.apply {
                 layoutManager = GridLayoutManager(context, 3)
-                adapter = AlbumAdapter(response.response!!.data, { album: Album -> onItemClicked(album) })
+                adapter = AlbumAdapter(
+                    response.response!!.data,
+                    { album: Album -> onItemClicked(album) })
             }
         } else {
             val snackbar = Snackbar.make(

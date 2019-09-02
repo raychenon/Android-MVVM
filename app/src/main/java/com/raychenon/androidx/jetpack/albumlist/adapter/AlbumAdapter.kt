@@ -1,8 +1,9 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.albumlist.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.raychenon.androidx.jetpack.R
 import com.raychenon.androidx.jetpack.models.Album
 
 class AlbumAdapter(private val albumList: List<Album>, private val listener: (Album) -> Unit) : RecyclerView.Adapter<AlbumHolder>() {

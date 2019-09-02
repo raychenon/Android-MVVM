@@ -1,7 +1,8 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.albumlist.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.raychenon.androidx.jetpack.R
 import com.raychenon.androidx.jetpack.image.ImageLoader
 import com.raychenon.androidx.jetpack.models.Album
 import com.squareup.picasso.Transformation
@@ -13,7 +14,9 @@ class AlbumHolder(itemView: View) : RecyclerView.ViewHolder(itemView), LayoutCon
     View.OnClickListener {
 
     private val transformation: Transformation =
-        MaskTransformation(itemView.getContext(), R.drawable.rounded_transformation)
+        MaskTransformation(itemView.getContext(),
+            R.drawable.rounded_transformation
+        )
 
     override val containerView: View?
         get() = itemView

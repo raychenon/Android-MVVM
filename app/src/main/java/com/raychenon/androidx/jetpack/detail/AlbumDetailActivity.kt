@@ -1,7 +1,8 @@
-package com.raychenon.androidx.jetpack
+package com.raychenon.androidx.jetpack.detail
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.raychenon.androidx.jetpack.R
 
 /**
  * An activity representing a single Item detail screen. This

@@ -5,7 +5,7 @@
                                                      android:layout_width="match_parent"
                                                      android:layout_height="match_parent"
                                                      android:fitsSystemWindows="true"
-                                                     tools:context=".AlbumDetailActivity"
+                                                     tools:context=".detail.AlbumDetailActivity"
                                                      tools:ignore="MergeRootFrame">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -63,7 +63,7 @@
                     android:layout_height="match_parent"
                     android:padding="16dp"
                     android:textIsSelectable="true"
-                    tools:context=".AlbumDetailFragment"/>
+                    tools:context=".detail.AlbumDetailFragment"/>
 
             <ImageView
                     android:id="@+id/imageviewDetailArtist"
