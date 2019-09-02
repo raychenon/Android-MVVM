@@ -5,7 +5,7 @@
 
 
     <ImageView
-            android:id="@+id/album_thumbnail"
+            android:id="@+id/imageAlbumThumbnail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
@@ -14,7 +14,7 @@
             android:layout_centerHorizontal="true"/>
 
     <TextView
-            android:id="@+id/artist_name"
+            android:id="@+id/textviewArtistName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -27,12 +27,12 @@
             android:textAppearance="?attr/textAppearanceCaption"/>
 
     <TextView
-            android:id="@+id/album_title"
+            android:id="@+id/textviewAlbumTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Title"
-            android:layout_below="@id/album_thumbnail"
+            android:layout_below="@id/imageAlbumThumbnail"
             android:textAppearance="?attr/textAppearanceListItemSmall"/>
 
 </RelativeLayout>
