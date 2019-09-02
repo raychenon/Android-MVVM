@@ -11,7 +11,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/android:api-25-alpha
+      - image: circleci/android:api-28
     working_directory: ~/Android-MVVM
     environment:
       # Customize the JVM maximum heap limit
@@ -24,9 +24,15 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Download Dependencies
-          command: |
-            sudo chmod +x ./gradlew
-            ./gradlew androidDependencies
+          pre:
+            - echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
+            - echo y | android update sdk --no-ui --all --filter "android-25, build-tools-25.0.2"
+            - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
+            - echo y | android update sdk --no-ui --all --filter "extra-android-support"
+          command: chmod +x ./gradlew
+          command: chmod +x gradlew
+          command: ./gradlew --gradle-version 4.8 --distribution-type all
+          command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradlew
