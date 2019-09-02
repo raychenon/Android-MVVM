@@ -1,9 +1,9 @@
-package com.raychenon.androidx.jetpack.albumlist
+package com.raychenon.androidx.jetpack.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.raychenon.androidx.jetpack.R
-import kotlinx.android.synthetic.main.list_activity.*
+import kotlinx.android.synthetic.main.home_activity.*
 
 /**
  * An activity representing a list of Pings. This activity
@@ -13,17 +13,17 @@ import kotlinx.android.synthetic.main.list_activity.*
  * item details. On tablets, the activity presents the list of items and
  * item details side-by-side using two vertical panes.
  */
-class AlbumListActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.list_activity)
+        setContentView(R.layout.home_activity)
 
         setSupportActionBar(toolbar)
         toolbar.title = title
 
         if (savedInstanceState == null) {
-            val fragment = AlbumGridFragment()
+            val fragment = HomeFragment()
 
             supportFragmentManager.beginTransaction()
                 .add(R.id.fragmentcontainerMain, fragment).commit()

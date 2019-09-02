@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack.albumlist
+package com.raychenon.androidx.jetpack.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,24 +12,24 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.raychenon.androidx.jetpack.R
-import com.raychenon.androidx.jetpack.albumlist.adapter.AlbumAdapter
 import com.raychenon.androidx.jetpack.detail.AlbumDetailActivity
 import com.raychenon.androidx.jetpack.detail.AlbumDetailFragment
+import com.raychenon.androidx.jetpack.home.adapter.AlbumAdapter
 import com.raychenon.androidx.jetpack.models.Album
 import com.raychenon.androidx.jetpack.models.AlbumLiveDataState
-import kotlinx.android.synthetic.main.item_list.*
+import kotlinx.android.synthetic.main.home_recyclerview.*
 import kotlinx.coroutines.launch
 
-class AlbumGridFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    lateinit var albumListViewModel: AlbumGridViewModel
+    lateinit var albumListViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.list_item_fragment, container, false)
+        val rootView = inflater.inflate(R.layout.home_fragment, container, false)
 
         return rootView
     }
@@ -42,7 +42,7 @@ class AlbumGridFragment : Fragment() {
         }
 
         albumListViewModel = ViewModelProviders.of(this)
-            .get(AlbumGridViewModel::class.java)
+            .get(HomeViewModel::class.java)
 
         albumListViewModel.getAlbumResponse(2529).observe(this, Observer { it ->
             handleResponse(it)

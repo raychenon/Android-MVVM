@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack.albumlist
+package com.raychenon.androidx.jetpack.home
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -7,14 +7,14 @@ import androidx.lifecycle.liveData
 import com.raychenon.androidx.jetpack.data.RetrofitFactory
 import com.raychenon.androidx.jetpack.models.AlbumLiveDataState
 
-class AlbumGridViewModel : ViewModel() {
+class HomeViewModel : ViewModel() {
 
-    val TAG = "AlbumGridViewModel"
+    val TAG = "HomeViewModel"
 
     val service = RetrofitFactory.getAlbumServiceInstance()
 
     fun getAlbumResponse(id: Int): LiveData<AlbumLiveDataState> = liveData {
-        Log.d("AlbumGridViewModel", "before call getAlbumsResponse")
+        Log.d("HomeViewModel", "before call getAlbumsResponse")
 
         try {
             val response = service.getAlbumsResponse(id)

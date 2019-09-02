@@ -9,15 +9,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.raychenon.androidx.jetpack.R
-import com.raychenon.androidx.jetpack.albumlist.AlbumListActivity
+import com.raychenon.androidx.jetpack.home.HomeActivity
 import com.raychenon.androidx.jetpack.image.ImageLoader
 import com.raychenon.androidx.jetpack.models.Album
-import kotlinx.android.synthetic.main.item_detail.view.*
-import kotlinx.android.synthetic.main.item_detail.view.fab
+import kotlinx.android.synthetic.main.detail_fragment.view.*
+import kotlinx.android.synthetic.main.detail_fragment.view.fab
 
 /**
  * A fragment representing a single Item detail screen.
- * This fragment is either contained in a [AlbumListActivity]
+ * This fragment is either contained in a [HomeActivity]
  * in two-pane mode (on tablets) or a [AlbumDetailActivity]
  * on handsets.
  */
@@ -46,7 +46,7 @@ class AlbumDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.item_detail, container, false)
+        val rootView = inflater.inflate(R.layout.detail_fragment, container, false)
 
         // Show the dummy content as text in a TextView.
         item?.let {
@@ -84,7 +84,7 @@ class AlbumDetailFragment : Fragment() {
                 //
                 // http://developer.android.com/design/patterns/navigation.html#up-vs-back
 
-                activity?.navigateUpTo(Intent(context, AlbumListActivity::class.java))
+                activity?.navigateUpTo(Intent(context, HomeActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

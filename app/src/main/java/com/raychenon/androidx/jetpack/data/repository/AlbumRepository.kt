@@ -17,7 +17,7 @@ class AlbumRepository(val service: AlbumService) {
 //    }
 //
 //    fun fetchNetworkAlbumResponse(id: Int): AlbumLiveDataState {
-//        Log.d("AlbumGridViewModel", "before call getAlbumsResponse")
+//        Log.d("HomeViewModel", "before call getAlbumsResponse")
 //        GlobalScope.async {
 //        try {
 //            val response = service.getAlbumsResponse(id)

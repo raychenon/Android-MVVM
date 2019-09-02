@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack.albumlist.adapter
+package com.raychenon.androidx.jetpack.home.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +8,7 @@ import com.raychenon.androidx.jetpack.models.Album
 import com.squareup.picasso.Transformation
 import jp.wasabeef.picasso.transformations.MaskTransformation
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.album_item_list.*
+import kotlinx.android.synthetic.main.home_grid_item.*
 
 class AlbumHolder(itemView: View) : RecyclerView.ViewHolder(itemView), LayoutContainer,
     View.OnClickListener {

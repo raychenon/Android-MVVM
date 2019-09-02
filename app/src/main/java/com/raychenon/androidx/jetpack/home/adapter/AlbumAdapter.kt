@@ -1,4 +1,4 @@
-package com.raychenon.androidx.jetpack.albumlist.adapter
+package com.raychenon.androidx.jetpack.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -10,7 +10,7 @@ class AlbumAdapter(private val albumList: List<Album>, private val listener: (Al
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumHolder {
         return LayoutInflater.from(parent.getContext())
-            .inflate(R.layout.album_item_list, parent, false)
+            .inflate(R.layout.home_grid_item, parent, false)
             .let { AlbumHolder(it) }
     }
 

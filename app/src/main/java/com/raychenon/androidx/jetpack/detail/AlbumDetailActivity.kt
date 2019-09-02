@@ -14,7 +14,7 @@ class AlbumDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_item_detail)
+        setContentView(R.layout.detail_activity)
 
         // savedInstanceState is non-null when there is fragment state
         // saved from previous configurations of this activity
