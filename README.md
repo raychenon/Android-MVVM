@@ -2,9 +2,11 @@
 
 This project uses Android Architecture Components ( ViewModel + LiveData and Kotlin's Coroutine)
 
-<img src="doc/andr[![CircleCI](https://circleci.com/gh/raychenon/android-mvvm.svg?style=svg)](https://circleci.com/gh/raychenon/android-mvvm)oid_animation.gif" >
+## Project
 
-On master detail interface,
+The project consists of 2 screens as master-detail interface :  the Home (with gridview) and the Detail
+
+![Demo animation](doc/android_animation.gif)
 
 ## Architecture
 
