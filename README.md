@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/raychenon/android-mvvm.svg?style=svg)](https://circleci.com/gh/raychenon/android-mvvm)
+[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 This project uses Android Architecture Components ( ViewModel + LiveData and Kotlin's Coroutine)
 
